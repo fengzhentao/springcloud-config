@@ -1,0 +1,56 @@
+server:
+  port: 9104
+  context-path: /device/management/api
+
+spring:
+  application:
+    name:  Device Management Web
+  redis:
+    host: ctodream.cn
+    port: 6379
+    password:
+
+dubbo:
+  application:
+    name: iot-applications.property-device-management-service
+  registry:
+    protocol: zookeeper
+    address: 127.0.0.1:2181
+
+entrance.guard:
+  bluetooth:
+    key: 1A2B3C4D5E6F7A8B9C0D111213141516
+  secret:
+    key: E8CAF73BEADD409F
+
+
+smart:
+  oauth2:
+    url: http://smart.sit.sqbj.com/oauth
+    clientId: pro/51e929909c3511e7a795b264e03878af
+    secret: 1ce215b664947de0128db749df3988d131f452489ae466c0a2c2f6e2bc1796c9
+  api:
+    baseUrl: http://smart.uat.sqbj.com/proApi
+    saveCardLog: /entranceAuthLogMgt/saveForAuth
+
+access-control:
+  baseUrl: http://139.196.76.46:9103/access_control/api
+  cardAuthorityUrl: /user_authority/$access_cards
+
+old:
+  oauth2:
+    url: http://qa-asrt.shequbanjing.com/authencation
+    clientId: sqbj-bjgj
+    secret: bjgj
+
+deviceWebApi: http://139.196.76.46:9099/device/api
+
+
+sqbjTemplateId: 1
+
+push-service:
+  url: http://bbp-users/__tools__/notify/push
+  clientId:
+  secret:
+
+basic.service: http://smart.sit.sqbj.com/basic
