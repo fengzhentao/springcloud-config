@@ -1,5 +1,5 @@
 server:
-  port: 9102
+  port: 9103
   context-path: /device/management/api
 
 spring:
